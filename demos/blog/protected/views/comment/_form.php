@@ -5,7 +5,7 @@
 	'enableAjaxValidation'=>true,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Fields 123 with <span class="required">*</span> are required.</p>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'author'); ?>

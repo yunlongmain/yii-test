@@ -20,27 +20,35 @@ return array(
 
 	'defaultController'=>'post',
 
+    'modules'=>array(
+        // uncomment the following to enable the Gii tool
+        'gii'=>array(
+            'class'=>'system.gii.GiiModule',
+            'password'=>'123',
+            // If removed, Gii defaults to localhost only. Edit carefully to taste.
+//            'ipFilters'=>array('127.0.0.1','::1'),
+        ),
+    ),
+
 	// application components
 	'components'=>array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
-		'db'=>array(
-			'connectionString' => 'sqlite:protected/data/blog.db',
-			'tablePrefix' => 'tbl_',
-		),
+//		'db'=>array(
+//			'connectionString' => 'sqlite:protected/data/blog.db',
+//			'tablePrefix' => 'tbl_',
+//		),
 		// uncomment the following to use a MySQL database
-		/*
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=blog',
+			'connectionString' => 'mysql:host=php.yun.com;dbname=yiitest',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => 'root',
 			'charset' => 'utf8',
 			'tablePrefix' => 'tbl_',
 		),
-		*/
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
@@ -61,11 +69,11 @@ return array(
 					'levels'=>'error, warning',
 				),
 				// uncomment the following to show log messages on web pages
-				/*
+
 				array(
 					'class'=>'CWebLogRoute',
 				),
-				*/
+
 			),
 		),
 	),

@@ -19,7 +19,7 @@
  * To establish a connection, set {@link setActive active} to true after
  * specifying {@link connectionString}, {@link username} and {@link password}.
  *
- * The following example shows how to create a CDbConnection instance and establish
+ * The following example shows how to create a CDbC„onnection instance and establish
  * the actual connection:
  * <pre>
  * $connection=new CDbConnection($dsn,$username,$password);

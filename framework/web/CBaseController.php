@@ -171,6 +171,7 @@ abstract class CBaseController extends CComponent
 			catch(Exception $e)
 			{
 				ob_end_clean();
+
 				throw $e;
 			}
 			return ob_get_clean();

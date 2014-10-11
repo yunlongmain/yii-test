@@ -7,7 +7,9 @@
  */
 class UserIdentity extends CUserIdentity
 {
-	/**
+	private $_id;
+
+    /**
 	 * Authenticates a user.
 	 * The example implementation makes sure if the username and password
 	 * are both 'demo'.
@@ -17,17 +19,35 @@ class UserIdentity extends CUserIdentity
 	 */
 	public function authenticate()
 	{
-		$users=array(
-			// username => password
-			'demo'=>'demo',
-			'admin'=>'admin',
-		);
-		if(!isset($users[$this->username]))
-			$this->errorCode=self::ERROR_USERNAME_INVALID;
-		elseif($users[$this->username]!==$this->password)
-			$this->errorCode=self::ERROR_PASSWORD_INVALID;
-		else
-			$this->errorCode=self::ERROR_NONE;
-		return !$this->errorCode;
+//		$users=array(
+//			// username => password
+//			'demo'=>'demo',
+//			'admin'=>'admin',
+//		);
+//		if(!isset($users[$this->username]))
+//			$this->errorCode=self::ERROR_USERNAME_INVALID;
+//		elseif($users[$this->username]!==$this->password)
+//			$this->errorCode=self::ERROR_PASSWORD_INVALID;
+//		else
+//			$this->errorCode=self::ERROR_NONE;
+//		return !$this->errorCode;
+
+
+        $user = USER::model()->find('LOWER(username)=:inputUserName',array(':inputUserName'=>strtolower($this->username)));
+        if(empty($user)) {
+            $this->errorCode = self::ERROR_USERNAME_INVALID;
+        } else if(!$user->validatePassword($this->password)) {
+            $this->errorCode = self::ERROR_PASSWORD_INVALID;
+        } else {
+            $this->_id = $user->id;
+            $this->username = $user->username;
+            $this->errorCode = self::ERROR_NONE;
+        }
+
+        return $this->errorCode == self::ERROR_NONE;
 	}
+
+    public function getId() {
+        return $this->_id;
+    }
 }
