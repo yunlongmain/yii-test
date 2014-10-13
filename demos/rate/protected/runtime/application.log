@@ -1,0 +1,111 @@
+2014/10/13 13:59:56 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('contest/admin')
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php?r=contest/admin
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php?r=site/login
+---
+2014/10/13 15:04:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "product/index".' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('product/index')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/YII/demos/rate/index.php?r=product/index
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php?r=test
+---
+2014/10/13 15:04:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "product/index".' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('product/index')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/YII/demos/rate/index.php?r=product/index
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php?r=test
+---
+2014/10/13 15:05:38 [error] [exception.CException] exception 'CException' with message 'TestController cannot find the requested view "_partial".' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php:878
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/protected/views/test/index.php(31): CController->renderPartial('_partial', NULL, true)
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CBaseController.php(126): require('/Users/yunlong/...')
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/yunlong/...', NULL, true)
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(869): CBaseController->renderFile('/Users/yunlong/...', NULL, true)
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#5 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/protected/controllers/TestController.php(7): CController->render('index')
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/actions/CInlineAction.php(49): TestController->actionIndex()
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('')
+#11 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('test')
+#12 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#13 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/YII/demos/rate/index.php?r=test
+---
+2014/10/13 15:10:10 [error] [php] Undefined variable: ajaxUrl (/Users/yunlong/百度云同步盘/code/php/YII/demos/rate/protected/views/test/index.php:56)
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(869): TestController->renderFile()
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(782): TestController->renderPartial()
+#2 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/protected/controllers/TestController.php(7): TestController->render()
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/actions/CInlineAction.php(49): TestController->actionIndex()
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(286): TestController->runAction()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): TestController->runActionWithFilters()
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): TestController->run()
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CWebApplication->run()
+REQUEST_URI=/YII/demos/rate/index.php?r=test
+in /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/protected/views/test/index.php (56)
+in /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/protected/controllers/TestController.php (7)
+in /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php (13)
+2014/10/13 15:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "rater".' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php:483
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(270): CController->missingAction('rater')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('rater')
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('contest/rater')
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/YII/demos/rate/index.php?r=contest/rater
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php?r=contest/admin
+---
+2014/10/13 15:59:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "rater".' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php:483
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(270): CController->missingAction('rater')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('rater')
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('contest/rater')
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/YII/demos/rate/index.php?r=contest/rater
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php?r=contest/admin
+---
+2014/10/13 16:52:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user_rate/admin".' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('user_rate/admin')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/YII/demos/rate/index.php?r=user_rate/admin
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php?r=rater/admin
+---
+2014/10/13 16:52:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user_rate/admin".' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('user_rate/admin')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/YII/demos/rate/index.php?r=user_rate/admin
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php?r=rater/admin
+---
