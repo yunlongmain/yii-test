@@ -24,4 +24,13 @@ require(dirname(__FILE__).'/YiiBase.php');
  */
 class Yii extends YiiBase
 {
+    public static function log($msg,$level=CLogger::LEVEL_INFO,$category='application')
+    {
+        if(is_array($msg) || is_object($msg))
+        {
+            $msg = var_export($msg,true);
+        }
+
+        YiiBase::log($msg,$level,$category);
+    }
 }

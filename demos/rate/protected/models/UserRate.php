@@ -15,6 +15,9 @@
  */
 class UserRate extends CActiveRecord
 {
+
+    private $rateDetailDesc;
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -88,9 +91,9 @@ class UserRate extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('teamId',$this->teamId,true);
-		$criteria->compare('contestId',$this->contestId,true);
-		$criteria->compare('raterId',$this->raterId,true);
+		$criteria->compare('teamId',$this->teamId);
+		$criteria->compare('contestId',$this->contestId);
+		$criteria->compare('raterId',$this->raterId);
 		$criteria->compare('rateDetail',$this->rateDetail,true);
 		$criteria->compare('score',$this->score);
 		$criteria->compare('valid',$this->valid);
@@ -98,7 +101,10 @@ class UserRate extends CActiveRecord
 		$criteria->compare('utime',$this->utime,true);
 
 		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
+            'pagination'=>array(
+                'pageSize'=>Yii::app()->params['ratePerPage'],
+            ),
+            'criteria'=>$criteria,
 		));
 	}
 
@@ -112,4 +118,26 @@ class UserRate extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+    protected function afterFind()
+    {
+        $rateDetail = json_decode($this->rateDetail);
+
+        $this->rateDetailDesc = "";
+        foreach($rateDetail as $k => $v) {
+            $this->rateDetailDesc .= Rate::getItem($k)->name.":".$v." ";
+        }
+
+        parent::afterFind();
+    }
+
+    public function getRateDetailDesc()
+    {
+        return $this->rateDetailDesc;
+    }
+
+    public function setRateDetailDesc($var)
+    {
+        $this->rateDetailDesc = $var;
+    }
 }

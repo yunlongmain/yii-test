@@ -48,14 +48,14 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'teamId',
 		'contestId',
 		'raterId',
-		'rateDetail',
+		'rateDetailDesc',
 		'score',
-		'valid',
-		/*
-		'ctime',
-		'utime',
-		'id',
-		*/
+        /*
+        'valid',
+        'ctime',
+        'utime',
+        'id',
+        */
 		array(
 			'class'=>'CButtonColumn',
 		),

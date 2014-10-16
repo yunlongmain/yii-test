@@ -71,4 +71,9 @@ class Lookup extends CActiveRecord
 		foreach($models as $model)
 			self::$_items[$type][$model->code]=$model->name;
 	}
+
+    protected function afterFind()
+    {
+        parent::afterFind();
+    }
 }

@@ -13,6 +13,7 @@
  */
 class Rate extends CActiveRecord
 {
+    public static $items;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -106,4 +107,17 @@ class Rate extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+    public static function getItem($id){
+        if(!isset(self::$items[$id])) {
+            self::loadItems($id);
+        }
+
+        return self::$items[$id];
+    }
+
+    private static function loadItems($id){
+        self::$items[$id] = self::model()->findByPk($id);
+
+    }
 }

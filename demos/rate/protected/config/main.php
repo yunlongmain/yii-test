@@ -12,6 +12,8 @@ return array(
 	// preloading 'log' component
 	'preload'=>array('log'),
 
+    'defaultController'=>'contest/admin',
+
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
@@ -64,9 +66,9 @@ return array(
 					'levels'=>'error, warning',
 				),
 				// uncomment the following to show log messages on web pages
-				/*array(
+				array(
 					'class'=>'CWebLogRoute',
-				),*/
+				),
 			),
 		),
 
@@ -74,8 +76,5 @@ return array(
 
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
-	'params'=>array(
-		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
-	),
+	'params'=>require(dirname(__FILE__).'/params.php'),
 );

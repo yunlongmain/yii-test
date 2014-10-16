@@ -147,7 +147,11 @@ class CComponent
 	 */
 	public function __set($name,$value)
 	{
-		$setter='set'.$name;
+		YII::log($name,'info','yl-debug');
+        YII::log("lala",'info','yl-debug');
+		YII::log($value,'info','yl-debug');
+		YII::log(is_array($this->_m),'info','yl-debug');
+        $setter='set'.$name;
 		if(method_exists($this,$setter))
 			return $this->$setter($value);
 		elseif(strncasecmp($name,'on',2)===0 && method_exists($this,$name))
