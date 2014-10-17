@@ -11,7 +11,8 @@
             );
 
             $rateDataMenu = array(
-                array('label'=>'结果统计', 'url'=>array('userrate/admin')),
+                array('label'=>'所有比分', 'url'=>array('userrate/admin')),
+                array('label'=>'结果统计', 'url'=>array('userrate/rankIndex')),
             );
 
             $this->beginWidget('zii.widgets.CPortlet', array(

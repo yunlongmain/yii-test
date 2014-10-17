@@ -39,7 +39,7 @@ class UserRateController extends Controller
 				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
 			),
-			array('deny',  // deny all users
+			array('allow',  // deny all users
 				'users'=>array('*'),
 			),
 		);
@@ -108,14 +108,14 @@ class UserRateController extends Controller
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
 	 * @param integer $id the ID of the model to be deleted
 	 */
-	public function actionDelete($id)
-	{
-		$this->loadModel($id)->delete();
-
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
-	}
+//	public function actionDelete($id)
+//	{
+//		$this->loadModel($id)->delete();
+//
+//		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+//		if(!isset($_GET['ajax']))
+//			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+//	}
 
 	/**
 	 * Lists all models.
@@ -128,12 +128,22 @@ class UserRateController extends Controller
 		));
 	}
 
+    public function actionRankIndex()
+    {
+
+    }
+
+    public function actionRank($id)
+    {
+        $this->render('rankResult');
+    }
+
 	/**
 	 * Manages all models.
 	 */
 	public function actionAdmin()
 	{
-		$model=new UserRate('search');
+        $model=new UserRate('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['UserRate']))
 			$model->attributes=$_GET['UserRate'];
