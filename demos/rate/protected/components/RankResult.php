@@ -40,7 +40,6 @@ class RankResult extends CPortlet
         $this->outputData = array();
 
         foreach($rateRuleArr as $rateRuleId)
-//        $rateRuleId=3;
         {
             $head = array();
             $body = array();
@@ -84,6 +83,7 @@ class RankResult extends CPortlet
             }
 
             //sort by rate value
+            $sort = array();
             foreach($rateDataGroupByTeam as $k=>$v)
             {
                 $sort[$k] = $v['rateValue'];
