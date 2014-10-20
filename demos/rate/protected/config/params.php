@@ -8,5 +8,5 @@ return array(
 	'adminEmail'=>'yunlongmain@gmail.com',
 	// number of posts displayed per page
 	'ratePerPage'=>30,
-	'copyrightInfo'=>'Copyright &copy; 2009 by My Company.',
+	'copyrightInfo'=>'Copyright &copy; 2014 by Baidu Evangelist Team.',
 );
