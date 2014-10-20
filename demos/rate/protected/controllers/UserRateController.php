@@ -1,5 +1,7 @@
 <?php
 
+Yii::import('application.extensions.array_help',true);
+
 class UserRateController extends Controller
 {
 	/**
@@ -135,7 +137,94 @@ class UserRateController extends Controller
 
     public function actionRank($id)
     {
-        $this->render('rankResult');
+        $criteria = new CDbCriteria();
+        $criteria->addColumnCondition(array('contestId'=>$id));
+        $rateModels = UserRate::model()->findAll($criteria);
+        $criteria->index = "id";
+        $teamModels = Team::model()->findAll($criteria);
+
+        $contestModel = Contest::model()->findByPk($id);
+        $rateRuleArr = explode(",",$contestModel->rateRule);
+
+        $filterSubRateRule = array();//子项的已被加到它的归属项里，所以过滤子项
+        $Data = array();
+
+        foreach($rateRuleArr as $rateRuleId)
+        {
+            $head = array();
+
+            if(!empty($filterSubRateRule[$rateRuleId])) {
+                continue;
+            }
+
+            //解析单项评分数据
+            $allRateData = array();
+            foreach($rateModels as $rateModel) {
+                $rateDetail = json_decode($rateModel->rateDetail,true);
+                if(!isset($rateDetail[$rateRuleId])){
+                    throw new CException('评分id'.$rateRuleId.'在评委id'.$rateModel->raterId.'团队id'.$rateModel->teamId.'中不存在');
+                }
+
+                $attributes = $rateModel->attributes;
+                $attributes['rateValue'] = $rateDetail[$rateRuleId];
+
+                $subId = Rate::getItem($rateRuleId)->subId;
+                if($subId != 0) {
+                    $filterSubRateRule[$subId] = true;
+                    if(!isset($rateDetail[$subId])) {
+                        throw new CException('子评分id'.$subId.'在评委id'.$rateModel->raterId.'团队id'.$rateModel->teamId.'中不存在');
+                    }
+
+                    $attributes['rateValue'] += $rateDetail[$subId];
+                }
+                $allRateData[] = $attributes;
+            }
+
+            //按团队整理分组评分
+            $rateDataGroupByTeam = array();
+            foreach($allRateData as $rateInfo) {
+                $teamId = $rateInfo['teamId'];
+
+                if(empty($rateDataGroupByTeam[$teamId])) {
+                    $rateDataGroupByTeam[$teamId] = $rateInfo;
+                }else {
+                    $rateDataGroupByTeam[$teamId]['rateValue'] += $rateInfo['rateValue'];
+                }
+            }
+
+            //sort by rate value
+            $sort = array();
+            foreach($rateDataGroupByTeam as $k=>$v)
+            {
+                $sort[$k] = $v['rateValue'];
+            }
+            array_multisort($sort,SORT_DESC,$rateDataGroupByTeam);
+
+            $rateDataGroupByTeam = array_add_rank($rateDataGroupByTeam);
+
+//            add team attribute
+            foreach($rateDataGroupByTeam as &$teamRate){
+                if(!isset($teamModels[$teamRate['teamId']])) {
+                    throw new CException('add team attribute中,teamId'.$teamRate['teamId'].'在teamModel中不存在');
+                }
+                $teamRate['teamName'] = $teamModels[$teamRate['teamId']]->name;
+                $teamRate['appName'] = $teamModels[$teamRate['teamId']]->appName;
+                $teamRate['teamDisplayId'] = $teamModels[$teamRate['teamId']]->teamDisplayId;
+            }
+            unset($teamRate);
+
+            $data[] = array(
+                'title' => Rate::getItem($rateRuleId)->name,
+                'head' => $head,
+                'body' => $rateDataGroupByTeam,
+            );
+        }
+
+
+        $this->render('rankResult',array(
+            'data' => $data,
+            'pageName' => $contestModel->name,
+        ));
     }
 
 	/**

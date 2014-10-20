@@ -227,3 +227,38 @@ div.search-form
 {
 	background: #80CFFF;
 }
+
+.table-striped > tbody > tr:nth-child(even) > td,
+.table-striped > tbody > tr:nth-child(even) > th {
+    background-color: #f9f9f9;
+}
+
+.table-striped
+{
+    /*table-layout:fixed;*/
+    word-wrap:break-word
+}
+
+.table-striped caption
+{
+    text-align:center;
+}
+
+.table-striped th,td
+{
+    border:1px;
+    border-color: #0066cc;
+    border-style: solid;
+}
+
+.table > thead > tr > th:first-child,
+.table > tbody > tr > td:first-child
+{
+    border-left: none;
+}
+
+.table > thead > tr > th:last-child,
+.table > tbody > tr > td:last-child
+{
+    border-right: none;
+}

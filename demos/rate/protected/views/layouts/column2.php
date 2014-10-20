@@ -1,6 +1,11 @@
 <?php /* @var $this Controller */ ?>
 <?php $this->beginContent('//layouts/main'); ?>
-    <div class="span-5 last">
+    <div class="span-18 ">
+        <div id="content">
+            <?php echo $content; ?>
+        </div><!-- content -->
+    </div>
+    <div class="span-6 last">
         <div id="sidebar">
             <?php
             $configDataMenu = array(
@@ -10,34 +15,32 @@
                 array('label'=>'评分规则', 'url'=>array('rate/admin')),
             );
 
+            $contestsData =Yii::app()->db->createCommand()
+                            ->select('id,name')
+                            ->from(Contest::model()->tableName())
+                            ->queryAll();
+
+            $contestRankLinkItems = array();
+            foreach($contestsData as $contest){
+                $contestRankLinkItem = array();
+                $contestRankLinkItem['label'] = $contest['name'];
+                $contestRankLinkItem['url'] = array('userrate/rank/'.$contest['id']);
+
+                $contestRankLinkItems[] = $contestRankLinkItem;
+            }
+
             $rateDataMenu = array(
                 array('label'=>'所有比分', 'url'=>array('userrate/admin')),
-                array('label'=>'结果统计', 'url'=>array('userrate/rankIndex')),
+                array('label'=>'结果统计', 'items'=>$contestRankLinkItems),
             );
 
-            $this->beginWidget('zii.widgets.CPortlet', array(
-                'title'=>'配置数据',
-            ));
             $this->widget('zii.widgets.CMenu', array(
-                'items'=>$configDataMenu,
-                'htmlOptions'=>array('class'=>'operations'),
+                'items'=>array(
+                    array('label' => '配置数据','items' => $configDataMenu),
+                    array('label' => '评分结果','items' => $rateDataMenu),
+                ),
             ));
-            $this->endWidget();
-
-            $this->beginWidget('zii.widgets.CPortlet', array(
-                'title'=>'评分结果',
-            ));
-            $this->widget('zii.widgets.CMenu', array(
-                'items'=>$rateDataMenu,
-                'htmlOptions'=>array('class'=>'operations'),
-            ));
-            $this->endWidget();
             ?>
         </div><!-- sidebar -->
     </div>
-<div class="span-19">
-	<div id="content">
-		<?php echo $content; ?>
-	</div><!-- content -->
-</div>
 <?php $this->endContent(); ?>
