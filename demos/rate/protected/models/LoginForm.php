@@ -13,6 +13,13 @@ class LoginForm extends CFormModel
 
 	private $_identity;
 
+//
+//
+//    public function init()
+//    {
+//
+//    }
+
 	/**
 	 * Declares the validation rules.
 	 * The rules state that username and password are required,
@@ -49,8 +56,13 @@ class LoginForm extends CFormModel
 		if(!$this->hasErrors())
 		{
 			$this->_identity=new UserIdentity($this->username,$this->password);
-			if(!$this->_identity->authenticate())
-				$this->addError('password','Incorrect username or password.');
+			if(!$this->_identity->authenticate()) {
+                if($this->_identity->errorCode === UserIdentity::ERROR_USER_NO_AUTH) {
+                    $this->addError('password',"Permission denied for the user named ".$this->username);
+                }else {
+                    $this->addError('password','Incorrect username or password.');
+                }
+            }
 		}
 	}
 

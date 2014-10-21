@@ -4067,3 +4067,385 @@ REQUEST_URI=/YII/demos/rate/index.php/userrate/rank/1
 in /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/protected/views/userrate/rankResult.php (4)
 in /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/protected/controllers/UserrateController.php (227)
 in /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php (13)
+2014/10/21 11:18:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/index".' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/index')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/YII/demos/rate/index.php/gii/index
+---
+2014/10/21 15:18:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController(false)
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php/site/login
+---
+2014/10/21 15:19:27 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController(false)
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php/site/login
+---
+2014/10/21 15:19:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController(false)
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php/site/login
+---
+2014/10/21 15:19:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController(false)
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php
+---
+2014/10/21 15:19:37 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController(false)
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php/site/login
+---
+2014/10/21 15:19:50 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController(false)
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php/site/login
+---
+2014/10/21 15:19:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('contest/admin')
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php/contest/admin
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php/site/index
+---
+2014/10/21 15:21:35 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('rate/admin')
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php/rate/admin
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php/userrate/rank/3
+---
+2014/10/21 15:26:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('rate/admin')
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php/rate/admin
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php/userrate/rank/3
+---
+2014/10/21 15:26:29 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('rate/admin')
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php/rate/admin
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php/userrate/rank/3
+---
+2014/10/21 15:26:33 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('contest/admin')
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php/contest/admin
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php/site/index
+---
+2014/10/21 15:33:25 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController(false)
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php/site/login
+---
+2014/10/21 15:42:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController(false)
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php/site/login
+---
+2014/10/21 15:43:16 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('contest/admin')
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php/contest/admin
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php/site/index
+---
+2014/10/21 15:44:34 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('team/admin')
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php/team/admin
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php/contest/index
+---
+2014/10/21 15:44:37 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController(false)
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php/team/admin
+---
+2014/10/21 15:44:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('contest/admin')
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php/contest/admin
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php/site/index
+---
+2014/10/21 19:55:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('rater/admin')
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php/rater/admin
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php/contest/admin
+---
+2014/10/21 19:55:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('update')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('contest/update')
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php/contest/update/1
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php/contest/admin
+---
+2014/10/21 19:56:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('delete')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('contest/delete')
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php/contest/delete/1?ajax=contest-grid
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php/contest/admin
+---
+2014/10/21 19:59:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('delete')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('rate/delete')
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php/rate/delete/1?ajax=rate-grid
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php/rate/admin
+---
+2014/10/21 19:59:50 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(282): CController->run('delete')
+#8 /Users/yunlong/百度云同步盘/code/php/YII/framework/web/CWebApplication.php(141): CWebApplication->runController('userrate/delete')
+#9 /Users/yunlong/百度云同步盘/code/php/YII/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/yunlong/百度云同步盘/code/php/YII/demos/rate/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/YII/demos/rate/index.php/userrate/delete/1?ajax=user-rate-grid
+HTTP_REFERER=http://php.yun.com/YII/demos/rate/index.php/userrate/admin
+---

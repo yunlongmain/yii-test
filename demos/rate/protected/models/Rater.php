@@ -119,4 +119,12 @@ class Rater extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+    public function validatePassword($ps){
+        return $ps === $this->password;//不加密
+    }
+
+    public function validateAuth(){
+        return $this->role > 0 ;
+    }
 }
