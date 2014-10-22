@@ -24,7 +24,7 @@
             foreach($contestsData as $contest){
                 $contestRankLinkItem = array();
                 $contestRankLinkItem['label'] = $contest['name'];
-                $contestRankLinkItem['url'] = array('rserRate/rank/'.$contest['id']);
+                $contestRankLinkItem['url'] = array('userRate/rank/'.$contest['id']);
 
                 $contestRankLinkItems[] = $contestRankLinkItem;
             }
