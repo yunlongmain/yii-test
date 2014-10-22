@@ -24,13 +24,13 @@
             foreach($contestsData as $contest){
                 $contestRankLinkItem = array();
                 $contestRankLinkItem['label'] = $contest['name'];
-                $contestRankLinkItem['url'] = array('userrate/rank/'.$contest['id']);
+                $contestRankLinkItem['url'] = array('rserRate/rank/'.$contest['id']);
 
                 $contestRankLinkItems[] = $contestRankLinkItem;
             }
 
             $rateDataMenu = array(
-                array('label'=>'所有比分', 'url'=>array('userrate/admin')),
+                array('label'=>'所有比分', 'url'=>array('userRate/admin')),
                 array('label'=>'结果统计', 'items'=>$contestRankLinkItems),
             );
 
