@@ -147,10 +147,6 @@ class CComponent
 	 */
 	public function __set($name,$value)
 	{
-		YII::log($name,'info','yl-debug');
-        YII::log("lala",'info','yl-debug');
-		YII::log($value,'info','yl-debug');
-		YII::log(is_array($this->_m),'info','yl-debug');
         $setter='set'.$name;
 		if(method_exists($this,$setter))
 			return $this->$setter($value);
