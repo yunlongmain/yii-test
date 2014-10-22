@@ -1,6 +1,6 @@
 <?php
 $this->breadcrumbs=array(
-    '结果统计'=>array('index'),
+    '结果统计'=>array('admin'),
     $pageName,
 );
     $this->widget('RankResult', array(

@@ -483,8 +483,9 @@ class YiiBase
 						break;
 				}
 			}
+            self::$_logger->log($msg,$level,$category);
 		}
-		self::$_logger->log($msg,$level,$category);
+
 	}
 
 	/**

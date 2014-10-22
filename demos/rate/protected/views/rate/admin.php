@@ -3,7 +3,7 @@
 /* @var $model Rate */
 
 $this->breadcrumbs=array(
-	'Rates'=>array('index'),
+	'Rates'=>array('admin'),
 	'Manage',
 );
 
