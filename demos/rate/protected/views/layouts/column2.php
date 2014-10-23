@@ -36,8 +36,9 @@
 
             $this->widget('zii.widgets.CMenu', array(
                 'items'=>array(
-                    array('label' => '配置数据','items' => $configDataMenu),
-                    array('label' => '评分结果','items' => $rateDataMenu),
+                    array('label' => '开始管理','url' => array('site/login'),'visible'=>Yii::app()->user->isGuest),
+                    array('label' => '配置数据','items' => $configDataMenu,'visible'=>!Yii::app()->user->isGuest),
+                    array('label' => '评分结果','items' => $rateDataMenu,'visible'=>!Yii::app()->user->isGuest),
                 ),
             ));
             ?>
