@@ -42,6 +42,15 @@
                 ),
             ));
             ?>
+<!--            flash animation-->
+<!--            <div>-->
+<!--                <object height="166" width="220" data="http://files.cnblogs.com/mrcoke/hamster.swf?" style=" padding-top:15px;outline:none;" type="application/x-shockwave-flash"><param value="http://files.cnblogs.com/mrcoke/hamster.swf?" name="movie"><param value="always" name="AllowScriptAccess"><param value="opaque" name="wmode">-->
+<!--                    <param value="http://files.cnblogs.com/mrcoke/hamster.swf?" name="movie">-->
+<!--                    <param value="always" name="AllowScriptAccess">-->
+<!--                    <param value="opaque" name="wmode">-->
+<!--                </object>-->
+<!--            </div>-->
+
         </div><!-- sidebar -->
     </div>
 <?php $this->endContent(); ?>
