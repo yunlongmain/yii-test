@@ -27,9 +27,15 @@ class Rater extends CActiveRecord
     const ROLE_SUPER_ADMIN = 2;
 
     public static $ROLE_DESC = array(
-        '0' => '评委',
-        '1' => '管理员',
-        '2' => '超级管理员',
+        self::ROLE_NORMAL => '评委',
+        self::ROLE_ADMIN=> '管理员',
+        self::ROLE_SUPER_ADMIN => '超级管理员',
+    );
+
+    public static $ROLE_IN_RBAC = array(
+        self::ROLE_NORMAL => 'rater',
+        self::ROLE_ADMIN=> 'admin',
+        self::ROLE_SUPER_ADMIN => 'super_admin',
     );
 
 	/**
@@ -125,6 +131,22 @@ class Rater extends CActiveRecord
     }
 
     public function validateAuth(){
-        return $this->role > 0 ;
+        return Yii::app()->authManager->checkAccess('admin',$this->id);
+    }
+
+    protected function beforeSave(){
+        $assignments = Yii::app()->authManager->getAuthAssignments($this->id);
+        if(count($assignments) > 1){
+            throw new CException($this->name."has multiple auth!");
+        }
+        if(!isset($assignments[self::$ROLE_IN_RBAC[$this->role]]) ) {
+            Yii::app()->authManager->assign(self::$ROLE_IN_RBAC[$this->role],$this->id);
+            foreach($assignments as $k => $v){
+                Yii::app()->authManager->revoke($k,$this->id);
+            }
+        }
+
+        return parent::beforeSave();
+
     }
 }

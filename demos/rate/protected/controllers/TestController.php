@@ -7,6 +7,17 @@ class TestController extends Controller
         $this->render('index');
 	}
 
+    public function actionInitRbac(){
+        Yii::app()->authManager->clearAll();
+
+        Yii::app()->authManager->createRole('rater','评委');
+        $role = Yii::app()->authManager->createRole('admin','管理员');
+        $role->addChild('rater');
+        $role = Yii::app()->authManager->createRole('super_admin','超级管理员');
+        $role->addChild('admin');
+
+    }
+
 	// Uncomment the following methods and override them if needed
 	/*
 	public function filters()
